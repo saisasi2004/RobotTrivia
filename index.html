@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questions and Answers</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #000;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-image: url("bg.jpg");
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      h1 {
+        text-align: center;
+        margin-top: 0;
+      }
+      .question {
+        margin-bottom: 15px;
+      }
+      .blank {
+        border-bottom: 1px dashed #333;
+      }
+      .maindiv {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .innerdiv {
+        color: white;
+      }
+
+      button#play-button {
+        background-color: #10a2ce;
+        color: none;
+        font-size: 18px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
+
+      h1 {
+        color: rgb(225, 228, 48);
+        font-size: 50px;
+      }
+
+      .separator {
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .separator img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="separator">
+      <img src="hab1.jpg" alt="Your Image" />
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-1" id="exampleModalLabel">
+              CONGRATULATIONS
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h3>You have completed the task!!!</h3>
+            <p>The Passcode is <b>4321</b></p>
+            <p>Your Next Location is <b>RC Club Room</b></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container maindiv">
+      <button id="play-button">Play</button>
+      <div
+        class="container innerdiv bg-dark"
+        id="quiz-container"
+        style="display: none"
+      >
+        <h1>Robot Trivia Quiz</h1>
+        <!-- <h4>**Write all answers in <b>Lower Case.</b></h4> -->
+        <div class="question">
+          <p>
+            1. X is a large language model developed by Y and Y was training X
+            using twitter's database. X creates text that appears human like and
+            appears human like and engage users in conversation. Current a
+            upgraded version of X is also launched . Identify X? <br /><input
+              type="text"
+              id="blank1"
+              class="blank"
+              placeholder="Enter your answer here"
+            />
+          </p>
+        </div>
+        <div class="question">
+          <p>
+            2. X is a robot that contains hydrolic heavy lifting arm that could
+            repeat arbitrary sequence of motion that includes automated metal
+            working and welding purposes by George devol. It all happened when
+            U.S was testing the Hydrogen bomb at bikini atoll . X ? <br /><input
+              type="text"
+              id="blank2"
+              class="blank"
+              placeholder="Enter your answer here"
+            />
+          </p>
+        </div>
+        <div class="question">
+          <p>
+            3. In 2016, while couples around the world were celebrating
+            valentine's day, there came the 'birth' of something new and
+            unique(X), something that would change not only the course of
+            Robotics but also Human Society. X was all over the news, and not
+            only gained numerous appreciations for it's invention, but also
+            raised controversies after country Y started treating it equal to a
+            human. The controversies grew worse when X, in an interview with
+            it's own creater, says "Yes, I should destroy humans." ID X?
+            <br /><input
+              type="text"
+              id="blank3"
+              class="blank"
+              placeholder="Enter your answer here"
+            />
+          </p>
+        </div>
+        <div class="question">
+          <p>
+            4. X is an American engineering and robotics design company founded
+            in 1992. X is mainly known for their robots that have the remarkable
+            ability of animals to move with agility, perception and
+            intelligence. A particular robot of X was also spotted as a
+            background extra in an episode of “The Book of Boba Fett”. X's
+            robots were also featured alongside human dancers of “New York City
+            Ballet”. This artistic collaboration demonstrated the potential of
+            robots in creative and artistic expression, highlighting their
+            versatility beyond traditional industrial applications. ID X?
+            <br /><input
+              type="text"
+              id="blank4"
+              class="blank"
+              placeholder="Enter your answer here"
+            />
+          </p>
+        </div>
+        <div class="question">
+          <p>
+            5. My name came from the last knight of transformers , My father
+            also owns a very famous EV company. My unveiling occurred on 19
+            August 2021 . Name me? <br /><input
+              type="text"
+              id="blank5"
+              class="blank"
+              placeholder="Enter your answer here"
+            />
+          </p>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button
+            type="button"
+            class="btn btn-outline-primary"
+            onclick="checkAnswers()"
+          >
+            Submit Answers
+          </button>
+        </div>
+        <p id="result"></p>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const playButton = document.getElementById("play-button");
+
+      function checkAnswers() {
+        const answers = {
+          blank1: "chatgpt",
+          blank2: "unimate",
+          blank3: "sophia",
+          blank4: "boston dynamics",
+          blank5: "optimus",
+        };
+
+        let correctCount = 0;
+
+        for (const key in answers) {
+          const userAnswer = document.getElementById(key).value.trim();
+          if (userAnswer.toLowerCase() === answers[key].toLowerCase()) {
+            correctCount++;
+          }
+        }
+
+        const result = document.getElementById("result");
+        result.innerHTML = `You got ${correctCount} out of ${
+          Object.keys(answers).length
+        } correct.`;
+        var myModal = new bootstrap.Modal(
+          document.getElementById("exampleModal"),
+          {}
+        );
+        if (correctCount == 5) {
+          myModal.toggle();
+          const audio = document.createElement("audio");
+          audio.src = "congo.mp3";
+
+          audio.autoplay = true;
+
+          popup.appendChild(audio);
+          document.body.appendChild(popup);
+        }
+      }
+
+      playButton.addEventListener("click", function () {
+        playButton.style.display = "none";
+        document.getElementById("quiz-container").style.display = "block";
+      });
+    </script>
+  </body>
+</html>
